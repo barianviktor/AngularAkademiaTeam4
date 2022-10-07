@@ -1,0 +1,19 @@
+<div class="create-form">
+  <form class="form-create" [formGroup]="noteForm" (ngSubmit)="handleSubmit()">
+    <div class="create-text-input">
+      <app-custom-text-input
+        [control]="content"
+        [placeHolder]="'Create note'"
+      ></app-custom-text-input>
+    </div>
+    <div class="create-text-input">
+      <app-custom-color-input
+        [control]="color"
+        [label]="'pick a color'"
+      ></app-custom-color-input>
+    </div>
+    <div class="create-text-button">
+      <app-main-button [name]="'Create note'"> </app-main-button>
+    </div>
+  </form>
+</div>

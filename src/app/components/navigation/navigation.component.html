@@ -1,0 +1,8 @@
+<a routerLinkActive="selected" [routerLink]="['/task1']">1. Feladat</a>
+<a routerLinkActive="selected" [routerLink]="['/task2']">2. Feladat</a>
+<a routerLinkActive="selected" [routerLink]="['/notes']">Sticky Notes</a>
+
+<app-custom-button
+  (buttonClicked)="onLogout()"
+  [content]="'Logout'"
+></app-custom-button>

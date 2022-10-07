@@ -1,0 +1,16 @@
+.create-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  width: 100%;
+  padding: 1%;
+}
+
+app-custom-text-input {
+  text-align: center;
+}
+
+app-custom-color-input {
+  text-align: center;
+}

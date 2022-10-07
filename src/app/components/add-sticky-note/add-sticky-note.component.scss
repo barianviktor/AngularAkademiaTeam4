@@ -1,0 +1,19 @@
+a {
+    width: 90%;
+    margin: 5%;
+    height: 300px;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+
+    align-items: center;
+    background-color: rgb(243, 240, 191);
+    color: rgb(46, 46, 46);
+    font-size: 45px;
+    text-decoration: none;
+    transition: all 0.1s ease;
+}
+a:hover{
+    background-color: rgb(236, 235, 188);
+
+}

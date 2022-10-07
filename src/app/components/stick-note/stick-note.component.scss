@@ -1,0 +1,16 @@
+div{
+    width: 90%;
+    margin: 5%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: space-between;
+}
+.created_at {
+    align-self: flex-end;
+}
+.content {
+    font-size: 20px;
+    padding: 5px;
+}

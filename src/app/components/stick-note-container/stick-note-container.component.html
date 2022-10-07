@@ -1,0 +1,8 @@
+<div class="note-container">
+  <div class="item" *ngFor="let note of noteList$ | async">
+    <app-stick-note [note]="note"></app-stick-note>
+  </div>
+  <div class="item">
+    <app-add-sticky-note></app-add-sticky-note>
+  </div>
+</div>

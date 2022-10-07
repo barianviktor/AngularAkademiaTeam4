@@ -1,0 +1,13 @@
+.box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: #FF0100;
+}
