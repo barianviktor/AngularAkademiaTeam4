@@ -15,11 +15,6 @@ const routes: Routes = [
     component: HomeComponent,
     children: [
       {
-        path: '',
-        pathMatch: 'full',
-        redirectTo: 'task1',
-      },
-      {
         path: 'task1',
         component: Task1Component,
       },
@@ -44,10 +39,6 @@ const routes: Routes = [
     component: LoginComponent,
     canActivate: [AlreadyAuthGuard],
     runGuardsAndResolvers: 'always',
-  },
-  {
-    path: '**',
-    redirectTo: '',
   },
 ];
 

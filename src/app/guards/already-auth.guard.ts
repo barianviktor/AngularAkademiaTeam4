@@ -11,7 +11,6 @@ import { AuthenticationService } from '../services/authentication.service';
 
 @Injectable({
   providedIn: 'root',
-  
 })
 export class AlreadyAuthGuard implements CanActivate {
   constructor(
@@ -27,7 +26,7 @@ export class AlreadyAuthGuard implements CanActivate {
     | boolean
     | UrlTree {
     if (this.authenticationService.getIsLogedIn()) {
-      this.router.navigate(['']);
+      this.router.navigate(['/task1']);
       return false;
     } else {
       return true;
