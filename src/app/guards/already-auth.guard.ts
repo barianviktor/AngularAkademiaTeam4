@@ -26,7 +26,7 @@ export class AlreadyAuthGuard implements CanActivate {
     | boolean
     | UrlTree {
     if (this.authenticationService.getIsLogedIn()) {
-      this.router.navigate(['/task1']);
+      this.router.navigate(['/']);
       return false;
     } else {
       return true;
