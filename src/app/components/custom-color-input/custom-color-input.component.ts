@@ -8,7 +8,7 @@ import { FormControl } from '@angular/forms';
 })
 export class CustomColorInputComponent implements OnInit {
   @Input() control!: FormControl;
-  @Input() label: string = '';
+  @Input() label: string = 'Pick a color';
   constructor() {}
 
   ngOnInit(): void {}

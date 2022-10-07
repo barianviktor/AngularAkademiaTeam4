@@ -6,6 +6,10 @@ div{
     flex-direction: column;
     padding: 20px;
     justify-content: space-between;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.397);
+}
+p {
+    word-break: break-all;
 }
 .created_at {
     align-self: flex-end;

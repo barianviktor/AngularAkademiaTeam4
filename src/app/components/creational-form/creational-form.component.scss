@@ -1,16 +1,24 @@
-.create-form {
+  
+
+.create-page{
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 400px;
+  min-height: 100vh;
   width: 100%;
-  padding: 1%;
 }
-
-app-custom-text-input {
-  text-align: center;
+.form-container {
+  background-color: rgb(248, 248, 248);
+  padding: 25px 10px;
+  border: 1px solid rgb(34, 34, 34);
+  border-radius: 4px;
+  box-shadow: 3px 5px 5px rgba(44, 44, 44, 0.247);
 }
-
-app-custom-color-input {
+.button-container,
+.input-container{
+  padding: 10px 50px;
+  width: 400px;
+}
+h2{
   text-align: center;
 }
