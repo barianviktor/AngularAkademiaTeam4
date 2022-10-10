@@ -1,20 +1,20 @@
-div{
-    width: 90%;
-    margin: 5%;
-    min-height: 300px;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    justify-content: space-between;
-    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.397);
+div {
+  width: 90%;
+  margin: 5%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: space-between;
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.397);
 }
 p {
-    word-break: break-all;
+  word-break: break-all;
 }
 .created_at {
-    align-self: flex-end;
+  align-self: flex-end;
 }
 .content {
-    font-size: 20px;
-    padding: 5px;
+  font-size: 20px;
+  padding: 5px;
 }
