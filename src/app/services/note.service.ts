@@ -94,4 +94,7 @@ export class NoteService {
     );
     this.noteList$.next(notes);
   }
+  deleteAllNotes() {
+    this.noteList$.next([]);
+  }
 }

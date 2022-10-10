@@ -24,6 +24,7 @@ import { AddStickyNoteComponent } from './components/add-sticky-note/add-sticky-
 import { EditNoteComponent } from './features/notes/edit-note/edit-note.component';
 import { EditNoteFormComponent } from './components/edit-note-form/edit-note-form.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { StickyNoteControlsComponent } from './components/sticky-note-controls/sticky-note-controls.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +45,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AddStickyNoteComponent,
     EditNoteComponent,
     EditNoteFormComponent,
+    StickyNoteControlsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, FontAwesomeModule],
   providers: [],
