@@ -2,7 +2,7 @@
   [ngStyle]="{ backgroundColor: note.backgroundColor, color: note.color }"
   class="note-container"
 >
-  <div class="icon-container" [ngStyle]="{ border: '1px solid ' + note.color }">
+  <div class="icon-container" [ngStyle]="{ borderColor: note.color }">
     <fa-icon
       [ngStyle]="{ color: note.color }"
       [icon]="faEdit"
