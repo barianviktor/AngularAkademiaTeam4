@@ -41,6 +41,7 @@ export class CreationalFormComponent implements OnInit {
   handleSubmit() {
     if (this.noteForm.valid) {
       let note: INote = {
+        id: this.noteService.noteList$.value.length,
         color: this.color.getRawValue(),
         backgroundColor: this.backgroundColor.getRawValue(),
         content: this.content.getRawValue(),
