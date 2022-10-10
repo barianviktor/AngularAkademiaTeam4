@@ -2,11 +2,15 @@ import { Injectable } from '@angular/core';
 import {
   BehaviorSubject,
   filter,
+  find,
   first,
   from,
+  map,
   Observable,
+  of,
   switchMap,
   tap,
+  throwError,
 } from 'rxjs';
 import { INote } from '../interfaces/note.interface';
 
@@ -52,16 +56,23 @@ export class NoteService {
     notes.push(note);
     this.noteList$.next(notes);
   }
-  getNote$(id: number): Observable<INote> {
+  getNote$(id: number): Observable<INote | undefined> {
     return this.noteList$.pipe(
-      switchMap((notes: INote[]) => {
+      /* switchMap((notes: INote[]) => {
         return from(notes);
       }),
+
       first((note: INote) => {
         return note.id == id;
+      }) */
+      map((notes: INote[]) => {
+        return notes.find((note: INote) => {
+          return id == note.id;
+        });
       })
     );
   }
+
   editNote(changedNote: INote): void {
     let notes = this.noteList$.getValue();
     notes.splice(
@@ -82,5 +93,8 @@ export class NoteService {
       1
     );
     this.noteList$.next(notes);
+  }
+  deleteAllNotes() {
+    this.noteList$.next([]);
   }
 }
