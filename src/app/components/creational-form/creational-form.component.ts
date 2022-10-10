@@ -24,7 +24,8 @@ export class CreationalFormComponent implements OnInit {
   ) {
     this.noteForm = fb.group({
       content: ['', [Validators.required]],
-      color: ['#ea2a2a', [Validators.required]],
+      color: ['#00000', [Validators.required]],
+      backgroundColor: ['#ea2a2a', [Validators.required]],
     });
   }
 
@@ -34,11 +35,14 @@ export class CreationalFormComponent implements OnInit {
   get color(): FormControl {
     return this.noteForm.get('color') as FormControl;
   }
-
+  get backgroundColor(): FormControl {
+    return this.noteForm.get('backgroundColor') as FormControl;
+  }
   handleSubmit() {
     if (this.noteForm.valid) {
       let note: INote = {
         color: this.color.getRawValue(),
+        backgroundColor: this.backgroundColor.getRawValue(),
         content: this.content.getRawValue(),
         create_at: new Date().toISOString().split('T')[0],
       };

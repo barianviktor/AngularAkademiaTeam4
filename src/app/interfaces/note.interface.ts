@@ -3,4 +3,5 @@ export interface INote {
   content: string;
   create_at: string;
   color: string;
+  backgroundColor: string;
 }

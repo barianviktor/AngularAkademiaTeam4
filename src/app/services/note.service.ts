@@ -10,25 +10,29 @@ export class NoteService {
     {
       id: 0,
       content: 'adsadsadsadsadsa',
-      color: 'red',
+      color: 'white',
+      backgroundColor: 'red',
       create_at: '2022-01-01',
     },
     {
       id: 1,
       content: 'adsadsdadsafdfasfcxycdsadsa',
-      color: 'orange',
+      color: 'white',
+      backgroundColor: 'orange',
       create_at: '2022-01-01',
     },
     {
       id: 2,
       content: 'adsadsadsadfdcxya dsadsa sadsa',
-      color: 'blue',
+      color: 'white',
+      backgroundColor: 'blue',
       create_at: '2022-01-01',
     },
     {
       id: 3,
       content: 'adsadsadsadsdsadsad  dsdwqewq  sadsa',
-      color: 'green',
+      color: 'white',
+      backgroundColor: 'green',
       create_at: '2022-01-01',
     },
   ]);
