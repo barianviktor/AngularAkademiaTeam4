@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Route, Router } from '@angular/router';
-import { Observable, switchMap } from 'rxjs';
+import { catchError, Observable, switchMap, tap } from 'rxjs';
 import { INote } from 'src/app/interfaces/note.interface';
 import { NoteService } from 'src/app/services/note.service';
 
@@ -10,7 +10,7 @@ import { NoteService } from 'src/app/services/note.service';
   styleUrls: ['./edit-note.component.scss'],
 })
 export class EditNoteComponent implements OnInit {
-  note$: Observable<INote>;
+  note$: Observable<INote | undefined>;
   constructor(
     private route: ActivatedRoute,
     private noteService: NoteService,
@@ -19,6 +19,11 @@ export class EditNoteComponent implements OnInit {
     this.note$ = route.params.pipe(
       switchMap((params: Params) => {
         return this.noteService.getNote$(params['id']);
+      }),
+      tap((result: INote | undefined) => {
+        if (!result) {
+          this.router.navigate(['/notes']);
+        }
       })
     );
   }
