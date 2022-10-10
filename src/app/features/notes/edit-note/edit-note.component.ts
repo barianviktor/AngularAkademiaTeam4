@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Route } from '@angular/router';
+import { ActivatedRoute, Params, Route } from '@angular/router';
+import { Observable, switchMap } from 'rxjs';
+import { INote } from 'src/app/interfaces/note.interface';
+import { NoteService } from 'src/app/services/note.service';
 
 @Component({
   selector: 'app-edit-note',
@@ -7,11 +10,13 @@ import { ActivatedRoute, Route } from '@angular/router';
   styleUrls: ['./edit-note.component.scss'],
 })
 export class EditNoteComponent implements OnInit {
-  constructor(private route: ActivatedRoute) {
-    console.log(route);
-    route.params.subscribe((x) => {
-      console.log(x);
-    });
+  note$: Observable<INote>;
+  constructor(private route: ActivatedRoute, private noteService: NoteService) {
+    this.note$ = route.params.pipe(
+      switchMap((params: Params) => {
+        return this.noteService.getNote$(params['id']);
+      })
+    );
   }
 
   ngOnInit(): void {}
