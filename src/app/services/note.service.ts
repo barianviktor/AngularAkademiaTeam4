@@ -18,29 +18,29 @@ export class NoteService {
     {
       id: 0,
       content: 'adsadsadsadsadsa',
-      color: 'white',
-      backgroundColor: 'red',
+      color: '#00000',
+      backgroundColor: '#323232',
       create_at: '2022-01-01',
     },
     {
       id: 1,
       content: 'adsadsdadsafdfasfcxycdsadsa',
-      color: 'white',
-      backgroundColor: 'orange',
+      color: '#ffffff',
+      backgroundColor: '#f0cb3a',
       create_at: '2022-01-01',
     },
     {
       id: 2,
       content: 'adsadsadsadfdcxya dsadsa sadsa',
-      color: 'white',
-      backgroundColor: 'blue',
+      color: '#ffffff',
+      backgroundColor: '#679ef0',
       create_at: '2022-01-01',
     },
     {
       id: 3,
       content: 'adsadsadsadsdsadsad  dsdwqewq  sadsa',
-      color: 'white',
-      backgroundColor: 'green',
+      color: '#ffffff',
+      backgroundColor: '#42e365',
       create_at: '2022-01-01',
     },
   ]);
@@ -61,5 +61,17 @@ export class NoteService {
         return note.id == id;
       })
     );
+  }
+  editNote(changedNote: INote): void {
+    let notes = this.noteList$.getValue();
+
+    notes.splice(
+      notes.findIndex((note: INote) => {
+        return changedNote.id == note.id;
+      }),
+      1,
+      changedNote
+    );
+    this.noteList$.next(notes);
   }
 }

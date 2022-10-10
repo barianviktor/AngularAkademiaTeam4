@@ -1,6 +1,10 @@
-<div>
-  {{ note$ | async | json }}
+<div *ngIf="note$ | async as note; else loading">
+  <app-edit-note-form
+    (changedNoteEmiter)="handleChangedNoteEmiter($event)"
+    [note]="note"
+  >
+  </app-edit-note-form>
 </div>
-<div *ngIf="note$ | async as note">
-  <app-edit-note-form [note]="note"> </app-edit-note-form>
-</div>
+<ng-template #loading>
+  <p>loading</p>
+</ng-template>

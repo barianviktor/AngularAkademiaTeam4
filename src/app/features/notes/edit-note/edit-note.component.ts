@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params, Route } from '@angular/router';
+import { ActivatedRoute, Params, Route, Router } from '@angular/router';
 import { Observable, switchMap } from 'rxjs';
 import { INote } from 'src/app/interfaces/note.interface';
 import { NoteService } from 'src/app/services/note.service';
@@ -11,13 +11,20 @@ import { NoteService } from 'src/app/services/note.service';
 })
 export class EditNoteComponent implements OnInit {
   note$: Observable<INote>;
-  constructor(private route: ActivatedRoute, private noteService: NoteService) {
+  constructor(
+    private route: ActivatedRoute,
+    private noteService: NoteService,
+    private router: Router
+  ) {
     this.note$ = route.params.pipe(
       switchMap((params: Params) => {
         return this.noteService.getNote$(params['id']);
       })
     );
   }
-
+  handleChangedNoteEmiter(changedNote: INote) {
+    this.noteService.editNote(changedNote);
+    this.router.navigate(['/notes']);
+  }
   ngOnInit(): void {}
 }

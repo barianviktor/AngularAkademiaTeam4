@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
@@ -14,6 +14,7 @@ import { INote } from 'src/app/interfaces/note.interface';
 })
 export class EditNoteFormComponent implements OnInit {
   editForm: FormGroup;
+  @Output() changedNoteEmiter = new EventEmitter<INote>();
   @Input() note!: INote;
   constructor(private fb: FormBuilder) {
     this.editForm = fb.group({
@@ -36,5 +37,18 @@ export class EditNoteFormComponent implements OnInit {
     this.color.setValue(this.note.color);
     this.backgroundColor.setValue(this.note.backgroundColor);
   }
-  handleSubmit() {}
+  handleSubmit() {
+    if (this.editForm.valid) {
+      let changedNote: INote = {
+        id: this.note.id,
+        create_at: this.note.create_at,
+        content: this.content.getRawValue(),
+        color: this.color.getRawValue(),
+        backgroundColor: this.backgroundColor.getRawValue(),
+      };
+      this.changedNoteEmiter.emit(changedNote);
+    } else {
+      this.editForm.markAllAsTouched();
+    }
+  }
 }
