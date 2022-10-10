@@ -1,7 +1,22 @@
-<div [ngStyle]="{ backgroundColor: note.backgroundColor, color: note.color }" class="note-container">
-  <div class="icon-container">
-    <fa-icon [icon]="faEdit" size="lg" class="editIcon" (click)="onEditClicked()"></fa-icon>
-    <fa-icon [icon]="faTrash" size="lg" class="deleteIcon" (click)="onDeleteClicked()"></fa-icon>
+<div
+  [ngStyle]="{ backgroundColor: note.backgroundColor, color: note.color }"
+  class="note-container"
+>
+  <div class="icon-container" [ngStyle]="{ border: '1px solid ' + note.color }">
+    <fa-icon
+      [ngStyle]="{ color: note.color }"
+      [icon]="faEdit"
+      size="lg"
+      class="editIcon"
+      (click)="onEditClicked()"
+    ></fa-icon>
+    <fa-icon
+      [ngStyle]="{ color: note.color }"
+      [icon]="faTrash"
+      size="lg"
+      class="deleteIcon"
+      (click)="onDeleteClicked()"
+    ></fa-icon>
   </div>
   <div class="content-container">
     <p class="content">{{ note.content }}</p>
