@@ -22,7 +22,7 @@ export class NoteService {
     {
       id: 0,
       content: 'adsadsadsadsadsa',
-      color: '#00000',
+      color: '#E2007E',
       backgroundColor: '#323232',
       create_at: '2022-01-01',
     },

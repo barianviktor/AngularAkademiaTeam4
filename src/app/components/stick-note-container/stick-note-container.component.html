@@ -1,6 +1,8 @@
 <app-sticky-note-controls
   (setHorizontal)="onSetHorzontal($event)"
   (setVertical)="onSetVerical($event)"
+  [currentHorizontal]="horizontalAlignment"
+  [currentVertical]="verticalAlignment"
 ></app-sticky-note-controls>
 
 <div class="note-container">
