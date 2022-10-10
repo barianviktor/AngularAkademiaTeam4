@@ -1,0 +1,12 @@
+<div class="accordion-item-container">
+  <div class="accordion-title-container">
+    <span class="icon-container">
+      <fa-icon [icon]="faArrowRight" *ngIf="!isClicked"></fa-icon>
+      <fa-icon [icon]="faArrowDown" *ngIf="isClicked"></fa-icon>
+    </span>
+    <p class="title">{{ title }}</p>
+  </div>
+  <div *ngIf="isClicked" class="accordion-desc-container">
+    <p class="description">{{ description }}</p>
+  </div>
+</div>
