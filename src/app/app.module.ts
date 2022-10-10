@@ -23,7 +23,7 @@ import { CustomColorInputComponent } from './components/custom-color-input/custo
 import { AddStickyNoteComponent } from './components/add-sticky-note/add-sticky-note.component';
 import { EditNoteComponent } from './features/notes/edit-note/edit-note.component';
 import { EditNoteFormComponent } from './components/edit-note-form/edit-note-form.component';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +45,7 @@ import { EditNoteFormComponent } from './components/edit-note-form/edit-note-for
     EditNoteComponent,
     EditNoteFormComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent],
 })
