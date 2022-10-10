@@ -1,3 +1,6 @@
 <div>
   {{ note$ | async | json }}
 </div>
+<div *ngIf="note$ | async as note">
+  <app-edit-note-form [note]="note"> </app-edit-note-form>
+</div>
