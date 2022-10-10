@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { INote } from 'src/app/interfaces/note.interface';
 import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 
@@ -11,11 +11,17 @@ export class StickNoteComponent implements OnInit {
   @Input() note!: INote;
   faEdit = faEdit;
   faTrash = faTrash;
+  @Output() editNote = new EventEmitter<number>();
+  @Output() deleteNote = new EventEmitter<number>();
   constructor() {}
 
   ngOnInit(): void {}
 
-  onEditClicked(): void {}
+  onEditClicked(): void {
+    this.editNote.emit(this.note.id);
+  }
 
-  onDeleteClicked(): void {}
+  onDeleteClicked(): void {
+    this.deleteNote.emit(this.note.id);
+  }
 }

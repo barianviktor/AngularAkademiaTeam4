@@ -64,13 +64,22 @@ export class NoteService {
   }
   editNote(changedNote: INote): void {
     let notes = this.noteList$.getValue();
-
     notes.splice(
       notes.findIndex((note: INote) => {
         return changedNote.id == note.id;
       }),
       1,
       changedNote
+    );
+    this.noteList$.next(notes);
+  }
+  deleteNote(id: number): void {
+    let notes = this.noteList$.getValue();
+    notes.splice(
+      notes.findIndex((note: INote) => {
+        return id == note.id;
+      }),
+      1
     );
     this.noteList$.next(notes);
   }
