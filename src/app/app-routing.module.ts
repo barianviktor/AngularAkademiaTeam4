@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './features/home/home.component';
 import { LoginComponent } from './features/login/login.component';
+import { EditNoteComponent } from './features/notes/edit-note/edit-note.component';
 import { HomeNotesComponent } from './features/notes/home-notes/home-notes.component';
 import { NewNoteComponent } from './features/notes/new-note/new-note.component';
 import { Task1Component } from './features/task1/task1.component';
@@ -33,9 +34,14 @@ const routes: Routes = [
         component: HomeNotesComponent,
       },
       {
+        path: 'notes/:id/edit',
+        component: EditNoteComponent,
+      },
+      {
         path: 'notes/new',
         component: NewNoteComponent,
       },
+
       {
         path: '**',
         redirectTo: 'task1',

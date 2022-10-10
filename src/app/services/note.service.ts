@@ -1,5 +1,13 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import {
+  BehaviorSubject,
+  filter,
+  first,
+  from,
+  Observable,
+  switchMap,
+  tap,
+} from 'rxjs';
 import { INote } from '../interfaces/note.interface';
 
 @Injectable({
@@ -43,5 +51,15 @@ export class NoteService {
     let notes = this.noteList$.getValue();
     notes.push(note);
     this.noteList$.next(notes);
+  }
+  getNote$(id: number): Observable<INote> {
+    return this.noteList$.pipe(
+      switchMap((notes: INote[]) => {
+        return from(notes);
+      }),
+      first((note: INote) => {
+        return note.id == id;
+      })
+    );
   }
 }
