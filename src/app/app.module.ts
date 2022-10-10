@@ -21,8 +21,9 @@ import { HomeNotesComponent } from './features/notes/home-notes/home-notes.compo
 import { NewNoteComponent } from './features/notes/new-note/new-note.component';
 import { CustomColorInputComponent } from './components/custom-color-input/custom-color-input.component';
 import { AddStickyNoteComponent } from './components/add-sticky-note/add-sticky-note.component';
+import { EditNoteComponent } from './features/notes/edit-note/edit-note.component';
+import { EditNoteFormComponent } from './components/edit-note-form/edit-note-form.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +42,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     NewNoteComponent,
     CustomColorInputComponent,
     AddStickyNoteComponent,
+    EditNoteComponent,
+    EditNoteFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, FontAwesomeModule],
   providers: [],
