@@ -11,6 +11,8 @@ import { NoteService } from 'src/app/services/note.service';
 })
 export class StickNoteContainerComponent implements OnInit {
   noteList$: Observable<INote[]>;
+  horizontalAlignment: string = 'start';
+  verticalAlignment: string = 'start';
   constructor(private noteService: NoteService, private router: Router) {
     this.noteList$ = noteService.noteList$;
   }
@@ -21,5 +23,11 @@ export class StickNoteContainerComponent implements OnInit {
   }
   onDeleteNote(id: number) {
     this.noteService.deleteNote(id);
+  }
+  onSetHorzontal(horizontal: string) {
+    this.horizontalAlignment = horizontal;
+  }
+  onSetVerical(vertical: string) {
+    this.verticalAlignment = vertical;
   }
 }

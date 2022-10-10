@@ -18,7 +18,10 @@
       (click)="onDeleteClicked()"
     ></fa-icon>
   </div>
-  <div class="content-container">
+  <div
+    [ngStyle]="{ textAlign: horizontal, justifyContent: vertical }"
+    class="content-container"
+  >
     <p class="content">{{ note.content }}</p>
     <p class="created_at">{{ note.create_at }}</p>
   </div>

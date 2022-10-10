@@ -8,9 +8,11 @@ import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./stick-note.component.scss'],
 })
 export class StickNoteComponent implements OnInit {
-  @Input() note!: INote;
   faEdit = faEdit;
   faTrash = faTrash;
+  @Input() note!: INote;
+  @Input() horizontal: string = 'start';
+  @Input() vertical: string = 'start';
   @Output() editNote = new EventEmitter<number>();
   @Output() deleteNote = new EventEmitter<number>();
   constructor() {}

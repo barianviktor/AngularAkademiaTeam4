@@ -1,9 +1,17 @@
+<app-sticky-note-controls
+  (setHorizontal)="onSetHorzontal($event)"
+  (setVertical)="onSetVerical($event)"
+></app-sticky-note-controls>
+
 <div class="note-container">
   <div class="item" *ngFor="let note of noteList$ | async">
     <app-stick-note
-    (editNote)="onEditNote($event)"
-    (deleteNote)="onDeleteNote($event)"
-    [note]="note"></app-stick-note>
+      [horizontal]="horizontalAlignment"
+      [vertical]="verticalAlignment"
+      (editNote)="onEditNote($event)"
+      (deleteNote)="onDeleteNote($event)"
+      [note]="note"
+    ></app-stick-note>
   </div>
   <div class="item">
     <app-add-sticky-note></app-add-sticky-note>
