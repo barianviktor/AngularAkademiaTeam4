@@ -1,15 +1,14 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import {
-  faTrash,
   faAlignCenter,
   faAlignJustify,
   faAlignLeft,
   faAlignRight,
-  faArrowDownUpAcrossLine,
-  faArrowUp,
   faArrowDown,
-  faArrowsUpToLine,
+  faArrowDownUpAcrossLine,
   faArrowsUpDownLeftRight,
+  faArrowUp,
+  faTrash,
 } from '@fortawesome/free-solid-svg-icons';
 import { NoteService } from 'src/app/services/note.service';
 @Component({
@@ -29,6 +28,8 @@ export class StickyNoteControlsComponent implements OnInit {
   faArrowsUpDownLeftRight = faArrowsUpDownLeftRight;
   @Output() setHorizontal = new EventEmitter<string>();
   @Output() setVertical = new EventEmitter<string>();
+  @Input() currentHorizontal = 'start';
+  @Input() currentVertical = 'start';
   constructor(private noteService: NoteService) {}
   onSetHorizontal(value: string) {
     this.setHorizontal.emit(value);
