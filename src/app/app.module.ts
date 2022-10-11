@@ -57,8 +57,6 @@ import { AccordionItemComponent } from './components/accordion-item/accordion-it
     FormsModule,
     ReactiveFormsModule,
     FontAwesomeModule,
-    /*     RouterTestingModule,
-     */
   ],
   providers: [],
   bootstrap: [AppComponent],
