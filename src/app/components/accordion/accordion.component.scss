@@ -1,14 +1,9 @@
 .accordion-container {
   width: 100%;
   padding: 0;
-  border: 1px solid black;
   border-bottom: none;
 }
 
 p {
   margin: 0;
-}
-
-.accordion-container:last-child {
-  border-bottom: 1px solid black;
 }
