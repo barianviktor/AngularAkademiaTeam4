@@ -12,13 +12,6 @@ import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
-    path: 'login',
-    component: LoginComponent,
-    canActivate: [AlreadyAuthGuard],
-    runGuardsAndResolvers: 'always',
-    title: 'Login',
-  },
-  {
     path: '',
     component: HomeComponent,
     children: [
@@ -47,14 +40,21 @@ const routes: Routes = [
         component: NewNoteComponent,
         title: 'Sticky Notes - New',
       },
-
-      {
-        path: '**',
-        redirectTo: 'task1',
-      },
+      { path: '', pathMatch: 'full', redirectTo: 'task1' },
     ],
     canActivate: [AuthGuard],
     runGuardsAndResolvers: 'always',
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+    canActivate: [AlreadyAuthGuard],
+    runGuardsAndResolvers: 'always',
+    title: 'Login',
+  },
+  {
+    path: '**',
+    redirectTo: '',
   },
 ];
 

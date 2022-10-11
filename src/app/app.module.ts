@@ -25,7 +25,6 @@ import { EditNoteComponent } from './features/notes/edit-note/edit-note.componen
 import { EditNoteFormComponent } from './components/edit-note-form/edit-note-form.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { StickyNoteControlsComponent } from './components/sticky-note-controls/sticky-note-controls.component';
-import { RouterTestingModule } from '@angular/router/testing';
 import { AccordionComponent } from './components/accordion/accordion.component';
 import { AccordionItemComponent } from './components/accordion-item/accordion-item.component';
 @NgModule({
@@ -58,7 +57,8 @@ import { AccordionItemComponent } from './components/accordion-item/accordion-it
     FormsModule,
     ReactiveFormsModule,
     FontAwesomeModule,
-    RouterTestingModule,
+    /*     RouterTestingModule,
+     */
   ],
   providers: [],
   bootstrap: [AppComponent],
