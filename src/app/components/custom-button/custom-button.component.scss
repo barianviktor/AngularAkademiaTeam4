@@ -4,7 +4,7 @@ button {
   width: 100%;
   padding: 15px;
   outline: none;
-  background-color: $error-color;
+  background-color: $background;
   font-weight: 600;
   cursor: pointer;
   color: $text-color-light;
@@ -16,4 +16,5 @@ button {
 }
 button:hover{
   filter: brightness(110%);
+  background-color: $error-color;
 }

@@ -15,7 +15,8 @@ button {
 }
 button:hover{
   box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.137);
-  filter: brightness(105%)
+  filter: brightness(105%);
+  background-color: #413C58;
 }
 button:active{
   filter: brightness(125%);

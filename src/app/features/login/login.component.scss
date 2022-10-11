@@ -1,4 +1,4 @@
- 
+
   @import "../../../colors";
 
 .login-page{
@@ -15,6 +15,7 @@
   color: $text-color-light;
   border-radius: 10px;
 
+
   box-shadow: 3px 5px 5px rgba(44, 44, 44, 0.247);
 }
 .button-container,
@@ -29,11 +30,16 @@
 
 .link-container{
   text-align: center;
+  color: $text-color-dark;
 }
 .header{
   text-align: center;
-  color: $secondary;
+  color: $text-color-dark;
   width: 100%;
   font-size: 35px;
   font-weight: 500;
+}
+
+.input-container {
+  color: black;
 }

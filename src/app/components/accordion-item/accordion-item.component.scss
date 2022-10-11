@@ -1,6 +1,9 @@
+@import "../../../colors";
+
 .accordion-title-container {
   display: flex;
   padding: 0 15px;
+  background-color: $secondary;
 }
 
 .icon-container {
