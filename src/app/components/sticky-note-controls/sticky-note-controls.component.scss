@@ -1,9 +1,10 @@
+@import "../../../colors";
+
 .controls-container{
     width: 100%;
     padding: 10px;
     display: flex;
     justify-content: space-between;
-    background-color: white;
 }
 .button-container{
     display: flex;
@@ -14,12 +15,11 @@
     padding: 10px;
     margin: 5px;
     border-radius: 4px;
-    color: black;
-    background-color: white;
+    color: $text-color-dark;
 
 }
 .selected,
 .icon-container:hover{
-    background-color: black;
-    color: white;
+    background-color: $text-color-dark;
+    color: $text-color-light;
 }

@@ -1,13 +1,23 @@
+@import "../../../colors";
 .selected {
-  background-color: #6fa9da;
-}
+  background-color: $secondary;
+  filter: brightness(110%);
 
+}
+.nav-contaienr{
+  background-color: $primary;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: $text-color-light;
+}
 a {
   display: block;
   width: 100%;
   padding: 15px;
-  background-color: #cee3f3;
-  border-bottom: 1px solid black;
+  background-color: $secondary;
+  filter: brightness(90%);
   color: black;
   font-weight: 600;
   text-decoration: none;

@@ -1,14 +1,19 @@
+@import "../../../colors";
+
 button {
   width: 100%;
   padding: 15px;
   outline: none;
-  background-color: #ff0100;
+  background-color: $error-color;
   font-weight: 600;
   cursor: pointer;
-  color: white;
+  color: $text-color-light;
   border-width: 0px;
   font-weight: 600;
   text-align: left;
   font-size: 14px;
   line-height: 1.4
+}
+button:hover{
+  filter: brightness(110%);
 }

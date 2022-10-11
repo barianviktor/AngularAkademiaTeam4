@@ -1,5 +1,5 @@
  
-  
+  @import "../../../colors";
 
 .login-page{
   display: flex;
@@ -9,10 +9,12 @@
   width: 100%;
 }
 .form-container {
-  background-color: rgb(248, 248, 248);
-  padding: 25px 10px;
-  border: 1px solid rgb(34, 34, 34);
-  border-radius: 4px;
+  background-color: $primary;
+  padding: 3%;
+  border: 2px solid $secondary;
+  color: $text-color-light;
+  border-radius: 10px;
+
   box-shadow: 3px 5px 5px rgba(44, 44, 44, 0.247);
 }
 .button-container,
@@ -21,13 +23,17 @@
   width: 400px;
 }
 .error-container{
-  color: rgb(255, 70, 70);
+  color: $error-color;
   padding: 5px;
 }
 
 .link-container{
   text-align: center;
 }
-h2{
+.header{
   text-align: center;
+  color: $secondary;
+  width: 100%;
+  font-size: 35px;
+  font-weight: 500;
 }

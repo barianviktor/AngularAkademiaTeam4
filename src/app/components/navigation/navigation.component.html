@@ -1,9 +1,14 @@
-<a routerLinkActive="selected" [routerLink]="['/task1']">Centered square</a>
-<a routerLinkActive="selected" [routerLink]="['/task2']">3 centered squares</a>
-<a routerLinkActive="selected" [routerLink]="['/notes']">Sticky Notes</a>
-<app-accordion></app-accordion>
-
-<app-custom-button
-  (buttonClicked)="onLogout()"
-  [content]="'Logout'"
-></app-custom-button>
+<div class="nav-contaienr">
+  <div>
+    <a routerLinkActive="selected" [routerLink]="['/task1']">Centered square</a>
+    <a routerLinkActive="selected" [routerLink]="['/task2']"
+      >3 centered squares</a
+    >
+    <a routerLinkActive="selected" [routerLink]="['/notes']">Sticky Notes</a>
+    <app-accordion></app-accordion>
+  </div>
+  <app-custom-button
+    (buttonClicked)="onLogout()"
+    [content]="'Logout'"
+  ></app-custom-button>
+</div>
