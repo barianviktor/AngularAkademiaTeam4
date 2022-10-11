@@ -12,9 +12,10 @@
   width: 20px;
 }
 
-i {
-  color: rgb(133, 133, 133);
+.icon {
+  color: rgb(0, 0, 0);
 }
+
 
 .accordion-desc-container {
   padding: 0 22px;
@@ -23,10 +24,12 @@ i {
 .description {
   margin: 0;
   padding: 10px 0;
+  color: $background;
 }
 
 .title {
   padding: 15px 15px 15px 0;
+  color: $background;
 }
 
 .accordion-item-container > * {
@@ -34,6 +37,6 @@ i {
 }
 
 .accordion-title-container:hover {
-  background-color: #6fa9da;
+  background-color: rgb(183, 208, 216);
   cursor: pointer;
 }
