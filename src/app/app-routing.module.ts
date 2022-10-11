@@ -16,6 +16,7 @@ const routes: Routes = [
     component: LoginComponent,
     canActivate: [AlreadyAuthGuard],
     runGuardsAndResolvers: 'always',
+    title: 'Login',
   },
   {
     path: '',
@@ -24,22 +25,27 @@ const routes: Routes = [
       {
         path: 'task1',
         component: Task1Component,
+        title: 'Centered Square',
       },
       {
         path: 'task2',
         component: Task2Component,
+        title: '3 Centered Squares',
       },
       {
         path: 'notes',
         component: HomeNotesComponent,
+        title: 'Sticky Notes',
       },
       {
         path: 'notes/:id/edit',
         component: EditNoteComponent,
+        title: 'Sticky Notes - Edit',
       },
       {
         path: 'notes/new',
         component: NewNoteComponent,
+        title: 'Sticky Notes - New',
       },
 
       {

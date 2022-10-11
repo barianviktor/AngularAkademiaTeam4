@@ -1,17 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  BehaviorSubject,
-  filter,
-  find,
-  first,
-  from,
-  map,
-  Observable,
-  of,
-  switchMap,
-  tap,
-  throwError,
-} from 'rxjs';
+import { BehaviorSubject, map, Observable } from 'rxjs';
 import { INote } from '../interfaces/note.interface';
 
 @Injectable({

@@ -1,28 +1,30 @@
-<div
-  [ngStyle]="{ backgroundColor: note.backgroundColor, color: note.color }"
-  class="note-container"
->
-  <div class="icon-container" [ngStyle]="{ borderColor: note.color }">
-    <fa-icon
-      [ngStyle]="{ color: note.color }"
-      [icon]="faEdit"
-      size="lg"
-      class="editIcon"
-      (click)="onEditClicked()"
-    ></fa-icon>
-    <fa-icon
-      [ngStyle]="{ color: note.color }"
-      [icon]="faTrash"
-      size="lg"
-      class="deleteIcon"
-      (click)="onDeleteClicked()"
-    ></fa-icon>
-  </div>
+<ng-template *ngIf="note">
   <div
-    [ngStyle]="{ textAlign: horizontal, justifyContent: vertical }"
-    class="content-container"
+    [ngStyle]="{ backgroundColor: note.backgroundColor, color: note.color }"
+    class="note-container"
   >
-    <p class="content">{{ note.content }}</p>
-    <p class="created_at">{{ note.create_at }}</p>
+    <div class="icon-container" [ngStyle]="{ borderColor: note.color }">
+      <fa-icon
+        [ngStyle]="{ color: note.color }"
+        [icon]="faEdit"
+        size="lg"
+        class="editIcon"
+        (click)="onEditClicked()"
+      ></fa-icon>
+      <fa-icon
+        [ngStyle]="{ color: note.color }"
+        [icon]="faTrash"
+        size="lg"
+        class="deleteIcon"
+        (click)="onDeleteClicked()"
+      ></fa-icon>
+    </div>
+    <div
+      [ngStyle]="{ textAlign: horizontal, justifyContent: vertical }"
+      class="content-container"
+    >
+      <p class="content">{{ note.content }}</p>
+      <p class="created_at">{{ note.create_at }}</p>
+    </div>
   </div>
-</div>
+</ng-template>
