@@ -1,6 +1,8 @@
 .accordion-container {
   width: 100%;
   padding: 0;
+  border: 1px solid black;
+  border-bottom: none;
 }
 
 p {
@@ -8,5 +10,5 @@ p {
 }
 
 .accordion-container:last-child {
-  border-bottom: none;
+  border-bottom: 1px solid black;
 }
