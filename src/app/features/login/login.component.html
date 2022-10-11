@@ -3,10 +3,10 @@
     <h2>Login</h2>
     <div class="input-container">
       <app-custom-text-input
-        [label]="'Email'"
-        [control]="email"
+        [label]="'Username'"
+        [control]="username"
         [type]="'text'"
-        [placeHolder]="'Email'"
+        [placeHolder]="'Username'"
       ></app-custom-text-input>
     </div>
     <div class="input-container">
@@ -20,7 +20,7 @@
     <div class="button-container">
       <app-main-button></app-main-button>
       <div class="error-container" *ngIf="loginForm.hasError('invalidLogin')">
-        <small>Incorrect email or password!</small>
+        <small>Incorrect username or password!</small>
       </div>
     </div>
     <div class="link-container">

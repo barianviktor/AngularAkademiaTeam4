@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     private router: Router
   ) {
     this.loginForm = fb.group({
-      email: ['', [Validators.required, Validators.email]],
+      username: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]],
     });
     console.log();
@@ -30,8 +30,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  get email(): FormControl {
-    return this.loginForm.get('email') as FormControl;
+  get username(): FormControl {
+    return this.loginForm.get('username') as FormControl;
   }
 
   get password(): FormControl {
@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit(): void {
     if (
-      this.authService.checkLoginData(this.email.value, this.password.value)
+      this.authService.checkLoginData(this.username.value, this.password.value)
     ) {
       this.router.navigate(['']);
     } else {

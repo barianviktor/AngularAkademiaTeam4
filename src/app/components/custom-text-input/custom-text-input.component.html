@@ -7,6 +7,6 @@
   </div>
   <div *ngIf="control.invalid && control.touched" class="error-container">
     <small *ngIf="control.hasError('required')">The field is required</small>
-    <small *ngIf="control.hasError('email')">Does not look like an email</small>
+    <small *ngIf="control.hasError('username')">Username is required</small>
   </div>
 </div>
