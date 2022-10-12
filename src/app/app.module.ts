@@ -13,7 +13,6 @@ import { MainButtonComponent } from './components/main-button/main-button.compon
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { CreationalFormComponent } from './components/creational-form/creational-form.component';
 import { StickNoteComponent } from './components/stick-note/stick-note.component';
 import { StickNoteContainerComponent } from './components/stick-note-container/stick-note-container.component';
 import { HomeNotesComponent } from './features/notes/home-notes/home-notes.component';
@@ -21,7 +20,6 @@ import { NewNoteComponent } from './features/notes/new-note/new-note.component';
 import { CustomColorInputComponent } from './components/custom-color-input/custom-color-input.component';
 import { AddStickyNoteComponent } from './components/add-sticky-note/add-sticky-note.component';
 import { EditNoteComponent } from './features/notes/edit-note/edit-note.component';
-import { EditNoteFormComponent } from './components/edit-note-form/edit-note-form.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { StickyNoteControlsComponent } from './components/sticky-note-controls/sticky-note-controls.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
@@ -39,7 +37,6 @@ import { StickyNoteFormComponent } from './components/sticky-note-form/sticky-no
     NavigationComponent,
     CustomTextInputComponent,
     MainButtonComponent,
-    CreationalFormComponent,
     StickNoteComponent,
     StickNoteContainerComponent,
     HomeNotesComponent,
@@ -47,7 +44,6 @@ import { StickyNoteFormComponent } from './components/sticky-note-form/sticky-no
     CustomColorInputComponent,
     AddStickyNoteComponent,
     EditNoteComponent,
-    EditNoteFormComponent,
     StickyNoteControlsComponent,
     AccordionComponent,
     AccordionItemComponent,
