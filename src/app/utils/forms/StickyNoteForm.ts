@@ -1,7 +1,7 @@
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { IStickyNoteForm } from '../forms-interfaces/stickyNoteForm.interface';
 
-export class StickyNote extends FormGroup<IStickyNoteForm> {
+export class StickyNoteForm extends FormGroup<IStickyNoteForm> {
   constructor() {
     super({
       content: new FormControl('', {
