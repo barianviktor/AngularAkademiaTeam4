@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CustomButtonComponent } from './custom-button.component';
+import { AccordionTaskComponent } from './accordion-task.component';
 
-describe('CustomButtonComponent', () => {
-  let component: CustomButtonComponent;
-  let fixture: ComponentFixture<CustomButtonComponent>;
+describe('AccordionTaskComponent', () => {
+  let component: AccordionTaskComponent;
+  let fixture: ComponentFixture<AccordionTaskComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CustomButtonComponent ]
+      declarations: [ AccordionTaskComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CustomButtonComponent);
+    fixture = TestBed.createComponent(AccordionTaskComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

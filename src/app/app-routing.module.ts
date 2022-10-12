@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AccordionTaskComponent } from './features/accordion-task/accordion-task.component';
 import { HomeComponent } from './features/home/home.component';
 import { LoginComponent } from './features/login/login.component';
 import { EditNoteComponent } from './features/notes/edit-note/edit-note.component';
@@ -39,6 +40,11 @@ const routes: Routes = [
         path: 'notes/new',
         component: NewNoteComponent,
         title: 'Sticky Notes - New',
+      },
+      {
+        path: 'accordion-task',
+        component: AccordionTaskComponent,
+        title: 'Accordion',
       },
       { path: '', pathMatch: 'full', redirectTo: 'task1' },
     ],

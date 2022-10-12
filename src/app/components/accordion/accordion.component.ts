@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { AccordionItem } from 'src/app/interfaces/accordion-item';
 import { AccordionService } from 'src/app/services/accordion.service';
 
@@ -8,13 +8,11 @@ import { AccordionService } from 'src/app/services/accordion.service';
   styleUrls: ['./accordion.component.scss'],
 })
 export class AccordionComponent implements OnInit {
-  accordionDataList: AccordionItem[] = [];
+  @Input() accordionDataList: AccordionItem[] = [];
 
-  constructor(private accordionService: AccordionService) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    this.accordionDataList = this.accordionService.getData();
-  }
+  ngOnInit(): void {}
 
   onItemClicked(clickedIndex: number): void {
     this.accordionDataList.map((element, elementIndex) => {

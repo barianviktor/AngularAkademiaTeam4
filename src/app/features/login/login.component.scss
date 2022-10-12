@@ -1,5 +1,4 @@
 
-  @import "../../../colors";
 
 .login-page{
   display: flex;
@@ -7,39 +6,4 @@
   justify-content: center;
   min-height: 100vh;
   width: 100%;
-}
-.form-container {
-  background-color: $primary;
-  padding: 3%;
-  border: 2px solid $secondary;
-  color: $text-color-light;
-  border-radius: 10px;
-
-
-  box-shadow: 3px 5px 5px rgba(44, 44, 44, 0.247);
-}
-.button-container,
-.input-container{
-  padding: 10px 50px;
-  width: 400px;
-}
-.error-container{
-  color: $error-color;
-  padding: 5px;
-}
-
-.link-container{
-  text-align: center;
-  color: $text-color-dark;
-}
-.header{
-  text-align: center;
-  color: $text-color-dark;
-  width: 100%;
-  font-size: 35px;
-  font-weight: 500;
-}
-
-.input-container {
-  color: black;
 }

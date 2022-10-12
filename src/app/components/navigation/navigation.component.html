@@ -5,10 +5,15 @@
       >3 centered squares</a
     >
     <a routerLinkActive="selected" [routerLink]="['/notes']">Sticky Notes</a>
-    <app-accordion></app-accordion>
+    <a routerLinkActive="selected" [routerLink]="['/accordion-task']"
+      >Accordion</a
+    >
   </div>
-  <app-custom-button
+
+  <app-main-button
     (buttonClicked)="onLogout()"
-    [content]="'Logout'"
-  ></app-custom-button>
+    [name]="'Logout'"
+    [type]="'button'"
+  >
+  </app-main-button>
 </div>

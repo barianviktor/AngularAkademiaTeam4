@@ -16,7 +16,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CreationalFormComponent } from './components/creational-form/creational-form.component';
 import { StickNoteComponent } from './components/stick-note/stick-note.component';
 import { StickNoteContainerComponent } from './components/stick-note-container/stick-note-container.component';
-import { CustomButtonComponent } from './components/custom-button/custom-button.component';
 import { HomeNotesComponent } from './features/notes/home-notes/home-notes.component';
 import { NewNoteComponent } from './features/notes/new-note/new-note.component';
 import { CustomColorInputComponent } from './components/custom-color-input/custom-color-input.component';
@@ -27,6 +26,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { StickyNoteControlsComponent } from './components/sticky-note-controls/sticky-note-controls.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
 import { AccordionItemComponent } from './components/accordion-item/accordion-item.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
+import { AccordionTaskComponent } from './features/accordion-task/accordion-task.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,6 @@ import { AccordionItemComponent } from './components/accordion-item/accordion-it
     NavigationComponent,
     CustomTextInputComponent,
     MainButtonComponent,
-    CustomButtonComponent,
     CreationalFormComponent,
     StickNoteComponent,
     StickNoteContainerComponent,
@@ -50,6 +50,8 @@ import { AccordionItemComponent } from './components/accordion-item/accordion-it
     StickyNoteControlsComponent,
     AccordionComponent,
     AccordionItemComponent,
+    LoginFormComponent,
+    AccordionTaskComponent,
   ],
   imports: [
     BrowserModule,

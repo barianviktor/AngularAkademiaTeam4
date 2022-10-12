@@ -1,0 +1,29 @@
+<form class="form-container" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <p class="header">Login</p>
+  <div class="input-container">
+    <app-custom-text-input
+      [label]="'Username'"
+      [control]="username"
+      [type]="'text'"
+      [placeHolder]="'Username'"
+    ></app-custom-text-input>
+  </div>
+  <div class="input-container">
+    <app-custom-text-input
+      [label]="'Password'"
+      [control]="password"
+      [type]="'password'"
+      [placeHolder]="'Password'"
+    ></app-custom-text-input>
+  </div>
+  <div class="button-container">
+    <app-main-button [type]="'submit'" [name]="'Login'"></app-main-button>
+    <div class="error-container" *ngIf="loginForm.hasError('invalidLogin')">
+      <p>Incorrect username or password!</p>
+    </div>
+  </div>
+  <div class="link-container">
+    <span class="link">No account yet?</span>
+    <a href="/">Register</a>
+  </div>
+</form>
