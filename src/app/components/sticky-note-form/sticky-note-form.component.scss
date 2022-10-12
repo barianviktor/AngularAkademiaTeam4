@@ -1,0 +1,26 @@
+@import "../../../colors";
+
+// .form-container {
+//   display: flex;
+//   justify-content: center;
+//   background-color: $secondary;
+//   margin: auto;
+//   padding: 3%;
+//   width: 400px;
+//   height: 200px;
+//   text-align: center;
+//   flex-direction: column;
+// }
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: $secondary;
+  margin: auto;
+  padding: 3%;
+  max-width: fit-content;
+  min-height: fit-content;
+}
