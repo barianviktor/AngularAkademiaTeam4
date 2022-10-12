@@ -1,3 +1,5 @@
-<div class="" *ngIf="accordionList$ | async as accordionList">
-  <app-accordion [accordionDataList]="accordionList"></app-accordion>
+<div class="accordion-page">
+  <div class="accordion" *ngIf="accordionList$ | async as accordionList">
+    <app-accordion [accordionDataList]="accordionList"></app-accordion>
+  </div>
 </div>

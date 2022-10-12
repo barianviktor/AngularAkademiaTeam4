@@ -1,12 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import {
-  FormGroup,
-  FormBuilder,
-  Validators,
-  FormControl,
-} from '@angular/forms';
-import { Router } from '@angular/router';
-import { AuthenticationService } from 'src/app/services/authentication.service';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { ILoginForm } from 'src/app/utils/forms-interfaces/loginForm.interface';
+import { LoginForm } from 'src/app/utils/forms/LoginForm';
 
 @Component({
   selector: 'app-login-form',
@@ -14,38 +9,19 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
   styleUrls: ['./login-form.component.scss'],
 })
 export class LoginFormComponent implements OnInit {
-  loginForm: FormGroup;
-
-  constructor(
-    fb: FormBuilder,
-    private authService: AuthenticationService,
-    private router: Router
-  ) {
-    this.loginForm = fb.group({
-      username: ['', [Validators.required]],
-      password: ['', [Validators.required]],
-    });
-  }
-
+  @Input() form!: FormGroup<ILoginForm>;
+  @Output() formSubmited = new EventEmitter<void>();
   ngOnInit(): void {}
 
   get username(): FormControl {
-    return this.loginForm.get('username') as FormControl;
+    return this.form.get('username') as FormControl;
   }
 
   get password(): FormControl {
-    return this.loginForm.get('password') as FormControl;
+    return this.form.get('password') as FormControl;
   }
 
   onSubmit(): void {
-    if (
-      this.authService.checkLoginData(this.username.value, this.password.value)
-    ) {
-      this.router.navigate(['']);
-    } else {
-      this.loginForm.setErrors({
-        invalidLogin: true,
-      });
-    }
+    this.formSubmited.emit();
   }
 }

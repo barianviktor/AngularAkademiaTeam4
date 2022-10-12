@@ -1,4 +1,4 @@
-<form class="form-container" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+<form class="form-container" [formGroup]="form" (ngSubmit)="onSubmit()">
   <p class="header">Login</p>
   <div class="input-container">
     <app-custom-text-input
@@ -18,9 +18,9 @@
   </div>
   <div class="button-container">
     <app-main-button [type]="'submit'" [name]="'Login'"></app-main-button>
-    <div class="error-container" *ngIf="loginForm.hasError('invalidLogin')">
-      <p>Incorrect username or password!</p>
-    </div>
+  </div>
+  <div class="error-container" *ngIf="form.hasError('invalidLogin')">
+    <p>Incorrect username or password!</p>
   </div>
   <div class="link-container">
     <span class="link">No account yet?</span>

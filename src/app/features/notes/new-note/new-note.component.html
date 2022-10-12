@@ -1,1 +1,6 @@
-<app-creational-form></app-creational-form>
+<app-sticky-note-form
+  (formSubmited)="handleSubmit()"
+  [form]="newNoteForm"
+  [title]="'Add New Note'"
+>
+</app-sticky-note-form>
