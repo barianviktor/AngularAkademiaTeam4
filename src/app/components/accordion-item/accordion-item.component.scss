@@ -3,7 +3,7 @@
 .accordion-title-container {
   display: flex;
   padding: 0 15px;
-  background-color: $secondary;
+  background-color: $complementary;
 }
 
 .icon-container {
@@ -19,17 +19,20 @@
 
 .accordion-desc-container {
   padding: 0 22px;
+  color:white;
+  background-color: white;
 }
 
 .description {
   margin: 0;
   padding: 10px 0;
-  color: $background;
+  color: $text-color-dark;
+
 }
 
 .title {
   padding: 15px 15px 15px 0;
-  color: $background;
+  color: $text-color-dark;
 }
 
 .accordion-item-container > * {
