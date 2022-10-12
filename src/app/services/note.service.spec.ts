@@ -34,4 +34,14 @@ describe('NoteService', () => {
     service.deleteAllNotes();
     expect(service.noteList$.getValue().length).toBe(0);
   });
+  it('should update a note ', () => {
+    service.editNote({
+      id: 1,
+      content: 'ffff',
+      color: '#ffffff',
+      backgroundColor: '#f0cb3a',
+      create_at: '2022-01-01',
+    });
+    expect(service.noteList$.getValue()[1].content).toBe('ffff');
+  });
 });
