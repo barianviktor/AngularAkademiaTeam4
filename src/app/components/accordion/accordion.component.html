@@ -1,10 +1,8 @@
-<div class="accordion-container">
-  <app-accordion-item
-    *ngFor="let item of accordionDataList; let i = index"
-    [title]="item.title"
-    [description]="item.description"
-    [isClicked]="item.isSeen"
-    (click)="onItemClicked(i)"
-    class="accordion-item"
-  ></app-accordion-item>
-</div>
+<app-accordion-item
+  *ngFor="let item of accordionDataList; let i = index"
+  [title]="item.title"
+  [description]="item.description"
+  [isClicked]="item.isSeen"
+  (click)="onItemClicked(i)"
+  class="accordion-item"
+></app-accordion-item>
