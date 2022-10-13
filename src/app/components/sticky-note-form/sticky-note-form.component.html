@@ -7,6 +7,7 @@
   <h2>{{ title }}</h2>
   <div class="input-container">
     <app-custom-text-input
+      id="stickyNoteFormContentInput"
       [label]="'Notes Content'"
       [control]="content"
       [placeHolder]="'Content'"
@@ -14,12 +15,14 @@
   </div>
   <div class="input-container">
     <app-custom-color-input
+      id="stickyNoteFormColorInput"
       [control]="color"
       [label]="'Pick a color'"
     ></app-custom-color-input>
   </div>
   <div class="input-container">
     <app-custom-color-input
+      id="stickyNoteFormBackgroundColorInput"
       [control]="backgroundColor"
       [label]="'Pick a background Color'"
     ></app-custom-color-input>

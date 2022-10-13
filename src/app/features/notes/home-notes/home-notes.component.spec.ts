@@ -36,19 +36,4 @@ describe('HomeNotesComponent', () => {
     const horizontal_center_button = el.query(By.css('#horizontal-center'));
     expect(horizontal_center_button).toBeTruthy();
   });
-  it('should click', fakeAsync(() => {
-    let controls_fixture: ComponentFixture<StickyNoteControlsComponent> =
-      TestBed.createComponent(StickyNoteControlsComponent);
-    let controls_component: StickyNoteControlsComponent =
-      controls_fixture.componentInstance;
-    let controls_el = controls_fixture.debugElement;
-
-    spyOn(controls_component, 'onSetHorizontal');
-    const horizontal_center_button = el.query(By.css('#horizontal-center'));
-    horizontal_center_button.triggerEventHandler('click', null);
-    controls_fixture.detectChanges();
-    console.log(spyOn.length);
-
-    expect(controls_component.onSetHorizontal).toHaveBeenCalled();
-  }));
 });
