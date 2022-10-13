@@ -25,9 +25,13 @@ export class StickNoteContainerComponent implements OnInit {
     this.noteService.deleteNote(id);
   }
   onSetHorzontal(horizontal: string) {
+    console.log('hor', horizontal, this.horizontalAlignment);
+
     this.horizontalAlignment = horizontal;
   }
   onSetVerical(vertical: string) {
+    console.log('ver', vertical, this.verticalAlignment);
+
     this.verticalAlignment = vertical;
   }
 }
