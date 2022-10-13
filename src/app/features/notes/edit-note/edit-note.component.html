@@ -1,15 +1,11 @@
-<div *ngIf="note$ | async as note; else loading">
-  <!-- <app-edit-note-form
-    (changedNoteEmiter)="handleChangedNoteEmiter($event)"
-    [note]="note"
-  >
-  </app-edit-note-form> -->
+<div class="edit-note-page">
   <app-sticky-note-form
+    *ngIf="note$ | async as note; else loading"
     [form]="editNoteForm"
     [title]="'Edit note'"
     (formSubmited)="onFormSubmited()"
   ></app-sticky-note-form>
+  <ng-template #loading>
+    <p>loading</p>
+  </ng-template>
 </div>
-<ng-template #loading>
-  <p>loading</p>
-</ng-template>

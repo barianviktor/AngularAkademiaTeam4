@@ -4,15 +4,27 @@
   background-position: center;
   background-size: cover;
 }
-
-.layout-container {
-  width: 500px;
-  height: 500px;
-  display: center
-  ;
+.layout-container{
+  width: 100%;
+  max-width: 900px;
+  margin: 25px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.number-container{
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(30px + 2vw);
+}
+.grid-container {
+  width: 600px;
+  height: 600px;
+  display: center;
   justify-items: center;
   margin: auto;
-  padding: 5%;
 }
 .grid-1-container {
   width: 100%;
