@@ -1,3 +1,4 @@
+import { GridTaskComponent } from './features/grid-task/grid-task.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccordionTaskComponent } from './features/accordion-task/accordion-task.component';
@@ -46,6 +47,13 @@ const routes: Routes = [
         component: AccordionTaskComponent,
         title: 'Accordion',
       },
+      {
+        path: 'grid-task',
+        component: GridTaskComponent,
+        title: 'Grid',
+      },
+
+
       { path: '', pathMatch: 'full', redirectTo: 'task1' },
     ],
     canActivate: [AuthGuard],
