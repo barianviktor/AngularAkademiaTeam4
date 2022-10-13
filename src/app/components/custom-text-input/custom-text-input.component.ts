@@ -8,7 +8,7 @@ import { FormControl } from '@angular/forms';
 })
 export class CustomTextInputComponent implements OnInit {
   @Input() type: string = 'text';
-  @Input() control!: FormControl;
+  @Input() control?: FormControl;
   @Input() placeHolder: string = '';
   @Input() label: string = '';
 

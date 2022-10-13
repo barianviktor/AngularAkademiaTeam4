@@ -1,27 +1,30 @@
-
-  <form class="form-container" [formGroup]="form" (ngSubmit)="onHandleForm()">
-    <h2>{{ title }}</h2>
-    <div class="input-container">
-      <app-custom-text-input
-        [label]="'Notes Content'"
-        [control]="content"
-        [placeHolder]="'Content'"
-      ></app-custom-text-input>
-    </div>
-    <div class="input-container">
-      <app-custom-color-input
-        [control]="color"
-        [label]="'Pick a color'"
-      ></app-custom-color-input>
-    </div>
-    <div class="input-container">
-      <app-custom-color-input
-        [control]="backgroundColor"
-        [label]="'Pick a background Color'"
-      ></app-custom-color-input>
-    </div>
-    <div class="button-container">
-      <app-main-button [type]="'submit'" [name]="title"></app-main-button>
-    </div>
-  </form>
-
+<form
+  *ngIf="form"
+  class="form-container"
+  [formGroup]="form"
+  (ngSubmit)="onHandleForm()"
+>
+  <h2>{{ title }}</h2>
+  <div class="input-container">
+    <app-custom-text-input
+      [label]="'Notes Content'"
+      [control]="content"
+      [placeHolder]="'Content'"
+    ></app-custom-text-input>
+  </div>
+  <div class="input-container">
+    <app-custom-color-input
+      [control]="color"
+      [label]="'Pick a color'"
+    ></app-custom-color-input>
+  </div>
+  <div class="input-container">
+    <app-custom-color-input
+      [control]="backgroundColor"
+      [label]="'Pick a background Color'"
+    ></app-custom-color-input>
+  </div>
+  <div class="button-container">
+    <app-main-button [type]="'submit'" [name]="title"></app-main-button>
+  </div>
+</form>

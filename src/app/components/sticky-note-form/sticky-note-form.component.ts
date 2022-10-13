@@ -8,18 +8,18 @@ import { IStickyNoteForm } from 'src/app/utils/forms-interfaces/stickyNoteForm.i
   styleUrls: ['./sticky-note-form.component.scss'],
 })
 export class StickyNoteFormComponent implements OnInit {
-  @Input() form!: FormGroup<IStickyNoteForm>;
+  @Input() form?: FormGroup<IStickyNoteForm>;
   @Input() title: string = 'New Note';
   @Output() formSubmited = new EventEmitter<void>();
   constructor() {}
   get content(): FormControl {
-    return this.form.get('content') as FormControl;
+    return this.form?.get('content') as FormControl;
   }
   get color(): FormControl {
-    return this.form.get('color') as FormControl;
+    return this.form?.get('color') as FormControl;
   }
   get backgroundColor(): FormControl {
-    return this.form.get('backgroundColor') as FormControl;
+    return this.form?.get('backgroundColor') as FormControl;
   }
   ngOnInit(): void {}
   onHandleForm() {

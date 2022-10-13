@@ -10,7 +10,7 @@ import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 export class StickNoteComponent implements OnInit {
   faEdit = faEdit;
   faTrash = faTrash;
-  @Input() note!: INote;
+  @Input() note?: INote;
   @Output() editNote = new EventEmitter<number>();
   @Output() deleteNote = new EventEmitter<number>();
   constructor() {}
@@ -18,10 +18,10 @@ export class StickNoteComponent implements OnInit {
   ngOnInit(): void {}
 
   onEditClicked(): void {
-    this.editNote.emit(this.note.id);
+    this.editNote.emit(this.note?.id);
   }
 
   onDeleteClicked(): void {
-    this.deleteNote.emit(this.note.id);
+    this.deleteNote.emit(this.note?.id);
   }
 }

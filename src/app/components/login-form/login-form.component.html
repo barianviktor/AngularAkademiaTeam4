@@ -1,4 +1,9 @@
-<form class="form-container" [formGroup]="form" (ngSubmit)="onSubmit()">
+<form
+  *ngIf="form"
+  class="form-container"
+  [formGroup]="form"
+  (ngSubmit)="onSubmit()"
+>
   <p class="header">Login</p>
   <div class="input-container">
     <app-custom-text-input
