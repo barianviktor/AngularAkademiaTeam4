@@ -29,7 +29,7 @@ import { AccordionTaskComponent } from './features/accordion-task/accordion-task
 import { StickyNoteFormComponent } from './components/sticky-note-form/sticky-note-form.component';
 import { GridTaskComponent } from './features/grid-task/grid-task.component';
 import { GridContainerComponent } from './components/grid-container/grid-container.component';
-import { StickyNoteControlsItemComponent } from './sticky-note-controls-item/sticky-note-controls-item.component';
+import { StickyNoteControlsItemComponent } from './components/sticky-note-controls-item/sticky-note-controls-item.component';
 @NgModule({
   declarations: [
     AppComponent,

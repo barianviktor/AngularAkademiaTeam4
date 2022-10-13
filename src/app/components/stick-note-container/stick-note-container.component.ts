@@ -11,8 +11,8 @@ import { NoteService } from 'src/app/services/note.service';
 })
 export class StickNoteContainerComponent implements OnInit {
   noteList$: Observable<INote[]>;
-  horizontalAlignment: string = 'start';
-  verticalAlignment: string = 'start';
+  horizontalAlignment: string = 'center';
+  verticalAlignment: string = 'center';
   constructor(private noteService: NoteService, private router: Router) {
     this.noteList$ = noteService.noteList$;
   }

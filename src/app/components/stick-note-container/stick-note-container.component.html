@@ -1,12 +1,20 @@
-<div class="notes-page">
-  <app-sticky-note-controls
-    (setHorizontal)="onSetHorzontal($event)"
-    (setVertical)="onSetVerical($event)"
-    [currentHorizontal]="horizontalAlignment"
-    [currentVertical]="verticalAlignment"
-  ></app-sticky-note-controls>
-
-  <div class="note-container">
+<div class="notes-container-w-controls">
+  <section class="notes-container-w-controls">
+    <app-sticky-note-controls
+      (setHorizontal)="onSetHorzontal($event)"
+      (setVertical)="onSetVerical($event)"
+      [currentHorizontal]="horizontalAlignment"
+      [currentVertical]="verticalAlignment"
+    ></app-sticky-note-controls>
+  </section>
+  <!--  -->
+  <div
+    [ngStyle]="{
+      justifyContent: horizontalAlignment,
+      allignItems: verticalAlignment
+    }"
+    class="note-container"
+  >
     <div class="item" *ngFor="let note of noteList$ | async">
       <app-stick-note
         (editNote)="onEditNote($event)"

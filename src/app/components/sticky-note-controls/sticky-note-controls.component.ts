@@ -28,8 +28,8 @@ export class StickyNoteControlsComponent implements OnInit {
   faArrowsUpDownLeftRight = faArrowsUpDownLeftRight;
   @Output() setHorizontal = new EventEmitter<string>();
   @Output() setVertical = new EventEmitter<string>();
-  @Input() currentHorizontal = 'start';
-  @Input() currentVertical = 'start';
+  @Input() currentHorizontal = 'center';
+  @Input() currentVertical = 'center';
   constructor(private noteService: NoteService) {}
   onSetHorizontal(value: string) {
     this.setHorizontal.emit(value);
