@@ -27,6 +27,8 @@ import { AccordionItemComponent } from './components/accordion-item/accordion-it
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { AccordionTaskComponent } from './features/accordion-task/accordion-task.component';
 import { StickyNoteFormComponent } from './components/sticky-note-form/sticky-note-form.component';
+import { GridTaskComponent } from './features/grid-task/grid-task.component';
+import { GridContainerComponent } from './components/grid-container/grid-container.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,6 +52,8 @@ import { StickyNoteFormComponent } from './components/sticky-note-form/sticky-no
     LoginFormComponent,
     AccordionTaskComponent,
     StickyNoteFormComponent,
+    GridTaskComponent,
+    GridContainerComponent,
   ],
   imports: [
     BrowserModule,

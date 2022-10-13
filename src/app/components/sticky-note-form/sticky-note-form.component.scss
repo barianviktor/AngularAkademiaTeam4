@@ -15,12 +15,11 @@
 .form-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   min-height: 100vh;
   background-color: $secondary;
   margin: auto;
   padding: 3%;
-  max-width: fit-content;
-  min-height: fit-content;
+    max-width:max-content;
+    min-height: max-content;
 }
