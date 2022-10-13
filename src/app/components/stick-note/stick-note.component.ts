@@ -11,8 +11,6 @@ export class StickNoteComponent implements OnInit {
   faEdit = faEdit;
   faTrash = faTrash;
   @Input() note!: INote;
-  @Input() horizontal: string = 'start';
-  @Input() vertical: string = 'start';
   @Output() editNote = new EventEmitter<number>();
   @Output() deleteNote = new EventEmitter<number>();
   constructor() {}
