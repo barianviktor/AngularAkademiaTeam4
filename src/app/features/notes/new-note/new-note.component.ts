@@ -3,7 +3,7 @@ import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { INote } from 'src/app/interfaces/note.interface';
 import { NoteService } from 'src/app/services/note.service';
-import { StickyNote } from 'src/app/utils/forms/StickyNoteForm';
+import { StickyNoteForm } from 'src/app/utils/forms/StickyNoteForm';
 
 @Component({
   selector: 'app-new-note',
@@ -11,7 +11,7 @@ import { StickyNote } from 'src/app/utils/forms/StickyNoteForm';
   styleUrls: ['./new-note.component.scss'],
 })
 export class NewNoteComponent implements OnInit {
-  public newNoteForm: StickyNote = new StickyNote();
+  public newNoteForm: StickyNoteForm = new StickyNoteForm();
   constructor(private noteService: NoteService, private router: Router) {}
 
   get content(): FormControl {
