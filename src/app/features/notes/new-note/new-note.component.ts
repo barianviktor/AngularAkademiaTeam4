@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { INote } from 'src/app/interfaces/note.interface';
@@ -10,9 +10,12 @@ import { StickyNoteForm } from 'src/app/utils/forms/StickyNoteForm';
   templateUrl: './new-note.component.html',
   styleUrls: ['./new-note.component.scss'],
 })
-export class NewNoteComponent implements OnInit {
+export class NewNoteComponent implements OnInit, OnDestroy {
   public newNoteForm: StickyNoteForm = new StickyNoteForm();
   constructor(private noteService: NoteService, private router: Router) {}
+  ngOnDestroy(): void {
+    console.log('destroy new stick page');
+  }
 
   get content(): FormControl {
     return this.newNoteForm.get('content') as FormControl;

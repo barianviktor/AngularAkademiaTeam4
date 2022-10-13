@@ -3,7 +3,12 @@
     {{ label }}
   </label>
   <div>
-    <input [type]="type" [formControl]="control" [placeholder]="placeHolder" />
+    <input
+      [id]="id"
+      [type]="type"
+      [formControl]="control"
+      [placeholder]="placeHolder"
+    />
   </div>
   <div *ngIf="control.invalid && control.touched" class="error-container">
     <small *ngIf="control.hasError('required')">The field is required</small>

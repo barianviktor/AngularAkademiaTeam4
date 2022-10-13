@@ -11,6 +11,7 @@ export class CustomTextInputComponent implements OnInit {
   @Input() control?: FormControl;
   @Input() placeHolder: string = '';
   @Input() label: string = '';
+  @Input() id: string = '';
 
   constructor() {}
 
