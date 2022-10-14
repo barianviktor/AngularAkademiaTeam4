@@ -1,18 +1,2 @@
 @import "../../../colors";
 
-.accordion-main {
-  display: flex;
-  width: 500px;
-  height: 500px;
-  background-color: $complementary;
-}
-
-.accordion-container {
-  display: block;
-  max-width: 500px;
-}
-
-.accordion-item {
-  display: block;
-  border: solid 1px #ccc;
-}
