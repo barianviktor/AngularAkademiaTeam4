@@ -5,13 +5,12 @@
     min-height: 100vh;
 }
 main{
-    
+    width: 100%;
     grid-column: 2/3;
     height: 100%;
 }
 nav{
     grid-column: 1/2;
-    border-right: 1px solid black;
     height: 100%;
-    background-color: red;
+    width: 100%;
 }
