@@ -1,20 +1,34 @@
-<div class="nav-contaienr">
+<mat-toolbar color="accent" class="nav-container">
   <div>
-    <a routerLinkActive="selected" [routerLink]="['/task1']">Centered square</a>
-    <a routerLinkActive="selected" [routerLink]="['/task2']"
-      >3 centered squares</a
+    <a mat-flat-button routerLinkActive="selected" [routerLink]="['/task1']">
+      Centered square
+    </a>
+    <a mat-flat-button routerLinkActive="selected" [routerLink]="['/task2']">
+      3 centered squares</a
     >
-    <a routerLinkActive="selected" [routerLink]="['/notes']">Sticky Notes</a>
-    <a routerLinkActive="selected" [routerLink]="['/accordion-task']"
+    <a mat-flat-button routerLinkActive="selected" [routerLink]="['/notes']">
+      Sticky Notes</a
+    >
+    <a
+      mat-flat-button
+      routerLinkActive="selected"
+      [routerLink]="['/accordion-task']"
       >Accordion</a
     >
-    <a routerLinkActive="selected" [routerLink]="['/grid-task']">Grid Task</a>
+    <a
+      mat-flat-button
+      routerLinkActive="selected"
+      [routerLink]="['/grid-task']"
+    >
+      Grid Task
+    </a>
   </div>
 
   <app-custom-button
     (buttonClicked)="onLogout()"
     [name]="'Logout'"
     [type]="'button'"
+    [color]="'warn'"
   >
   </app-custom-button>
-</div>
+</mat-toolbar>

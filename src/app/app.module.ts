@@ -16,7 +16,6 @@ import { GridContainerComponent } from './components/grid-container/grid-contain
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { StickNoteContainerComponent } from './components/stick-note-container/stick-note-container.component';
 import { StickNoteComponent } from './components/stick-note/stick-note.component';
-import { StickyNoteControlsItemComponent } from './components/sticky-note-controls-item/sticky-note-controls-item.component';
 import { StickyNoteControlsComponent } from './components/sticky-note-controls/sticky-note-controls.component';
 import { StickyNoteFormComponent } from './components/sticky-note-form/sticky-note-form.component';
 import { AccordionTaskComponent } from './features/accordion-task/accordion-task.component';
@@ -48,7 +47,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     StickyNoteFormComponent,
     GridTaskComponent,
     GridContainerComponent,
-    StickyNoteControlsItemComponent,
   ],
   imports: [
     BrowserModule,

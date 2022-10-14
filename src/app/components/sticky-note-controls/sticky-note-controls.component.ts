@@ -32,6 +32,8 @@ export class StickyNoteControlsComponent implements OnInit {
   @Input() currentVertical = 'center';
   constructor(private noteService: NoteService) {}
   onSetHorizontal(value: string) {
+    console.log(value);
+
     this.setHorizontal.emit(value);
   }
   onSetVertical(value: string) {

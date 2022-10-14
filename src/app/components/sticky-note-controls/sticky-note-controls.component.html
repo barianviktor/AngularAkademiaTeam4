@@ -1,66 +1,115 @@
-<div id="controls-container" class="controls-container">
-  <div class="button-container">
-    <app-sticky-note-controls-item
+<mat-toolbar class="controls-container" id="controls-container" color="accent">
+  <mat-button-toggle-group [value]="currentHorizontal">
+    <mat-button-toggle
       id="horizontal-center"
-      [icon]="faAlignCenter"
+      (click)="onSetHorizontal('center')"
+      value="center"
+    >
+      <mat-icon>format_align_center</mat-icon>
+    </mat-button-toggle>
+
+    <mat-button-toggle
+      (click)="onSetHorizontal('space-between')"
+      value="space-between"
+    >
+      <mat-icon>format_align_justify</mat-icon>
+    </mat-button-toggle>
+
+    <mat-button-toggle
+      (click)="onSetHorizontal('flex-start')"
+      value="flex-start"
+    >
+      <mat-icon>format_align_right</mat-icon>
+    </mat-button-toggle>
+
+    <mat-button-toggle (click)="onSetHorizontal('flex-end')" value="flex-end">
+      <mat-icon>format_align_left</mat-icon>
+    </mat-button-toggle>
+
+    <!-- <app-sticky-note-controls-item
+      id="horizontal-center"
+      [icon]="'format_align_center'"
       [value]="'center'"
       [current]="currentHorizontal"
       (itemClicked)="onSetHorizontal($event)"
-    ></app-sticky-note-controls-item>
+    ></app-sticky-note-controls-item> 
 
     <app-sticky-note-controls-item
-      [icon]="faAlignJustify"
+      [icon]="'format_align_justify'"
       [value]="'space-between'"
       [current]="currentHorizontal"
       (itemClicked)="onSetHorizontal($event)"
     ></app-sticky-note-controls-item>
     <app-sticky-note-controls-item
-      [icon]="faAlignRight"
+      [icon]="'format_align_right'"
       [value]="'flex-start'"
       [current]="currentHorizontal"
       (itemClicked)="onSetHorizontal($event)"
     ></app-sticky-note-controls-item>
     <app-sticky-note-controls-item
-      [icon]="faAlignLeft"
+      [icon]="'format_align_left'"
       [value]="'flex-end'"
       [current]="currentHorizontal"
       (itemClicked)="onSetHorizontal($event)"
-    ></app-sticky-note-controls-item>
-  </div>
-  <div class="button-container">
-    <app-sticky-note-controls-item
-      [icon]="faArrowsUpDownLeftRight"
+    ></app-sticky-note-controls-item>-->
+  </mat-button-toggle-group>
+
+  <mat-button-toggle-group class="button-container" [value]="currentVertical">
+    <mat-button-toggle (click)="onSetVertical('center')" value="center">
+      <mat-icon>unfold_less</mat-icon>
+    </mat-button-toggle>
+
+    <mat-button-toggle
+      (click)="onSetVertical('space-between')"
+      value="space-between"
+    >
+      <mat-icon>unfold_more</mat-icon>
+    </mat-button-toggle>
+
+    <mat-button-toggle (click)="onSetVertical('flex-start')" value="flex-start">
+      <mat-icon>expand_less</mat-icon>
+    </mat-button-toggle>
+
+    <mat-button-toggle (click)="onSetVertical('flex-end')" value="flex-end">
+      <mat-icon>keyboard_arrow_down</mat-icon>
+    </mat-button-toggle>
+
+    <!--     <app-sticky-note-controls-item
+      [icon]="'unfold_less'"
       [value]="'center'"
       [current]="currentVertical"
       (itemClicked)="onSetVertical($event)"
     ></app-sticky-note-controls-item>
 
     <app-sticky-note-controls-item
-      [icon]="faArrowDownUpAcrossLine"
+      [icon]="'unfold_more'"
       [value]="'space-between'"
       [current]="currentVertical"
       (itemClicked)="onSetVertical($event)"
     ></app-sticky-note-controls-item>
 
     <app-sticky-note-controls-item
-      [icon]="faArrowUp"
+      [icon]="'expand_less'"
       [value]="'flex-start'"
       [current]="currentVertical"
       (itemClicked)="onSetVertical($event)"
     ></app-sticky-note-controls-item>
 
     <app-sticky-note-controls-item
-      [icon]="faArrowDown"
+      [icon]="'keyboard_arrow_down'"
       [value]="'flex-end'"
       [current]="currentVertical"
       (itemClicked)="onSetVertical($event)"
-    ></app-sticky-note-controls-item>
-  </div>
-  <div class="button-container">
+    ></app-sticky-note-controls-item> -->
+  </mat-button-toggle-group>
+  <!-- <div class="button-container">
     <app-sticky-note-controls-item
       [value]="'trash'"
-      [icon]="faTrash"
+      [icon]="'delete'"
       (itemClicked)="handleDeleteAll()"
     ></app-sticky-note-controls-item>
-  </div>
-</div>
+  </div> -->
+  <button mat-mini-fab color="warn" (click)="handleDeleteAll()">
+    <mat-icon>delete</mat-icon>
+  </button>
+</mat-toolbar>
