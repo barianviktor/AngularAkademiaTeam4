@@ -5,6 +5,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import {CdkAccordionModule} from '@angular/cdk/accordion';
+
 
 @NgModule({
   declarations: [],
@@ -15,6 +17,7 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
     MatCardModule,
     MatIconModule,
     MatButtonToggleModule,
+
   ],
   exports: [
     MatButtonModule,
@@ -23,6 +26,8 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
     MatCardModule,
     MatIconModule,
     MatButtonToggleModule,
+    CdkAccordionModule
+
   ],
 })
 export class MaterialModule {}
