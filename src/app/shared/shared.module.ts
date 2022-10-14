@@ -2,17 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { CustomTextInputComponent } from './components/custom-text-input/custom-text-input.component';
-import { MainButtonComponent } from './components/main-button/main-button.component';
-import { CustomColorInputComponent } from './components/custom-color-input/custom-color-input.component';
+import { CustomInputComponent } from './components/custom-input/custom-input.component';
+import { CustomButtonComponent } from './components/custom-button/custom-button.component';
 import { MaterialModule } from '../material/material.module';
 
 @NgModule({
-  declarations: [
-    CustomTextInputComponent,
-    MainButtonComponent,
-    CustomColorInputComponent,
-  ],
+  declarations: [CustomInputComponent, CustomButtonComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -22,9 +17,8 @@ import { MaterialModule } from '../material/material.module';
   exports: [
     ReactiveFormsModule,
     FontAwesomeModule,
-    CustomTextInputComponent,
-    MainButtonComponent,
-    CustomColorInputComponent,
+    CustomInputComponent,
+    CustomButtonComponent,
     MaterialModule,
   ],
 })

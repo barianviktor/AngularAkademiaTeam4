@@ -1,4 +1,4 @@
-<form
+<!-- <form
   *ngIf="form"
   class="form-container"
   [formGroup]="form"
@@ -6,23 +6,23 @@
 >
   <p class="header">Login</p>
   <div class="input-container">
-    <app-custom-text-input
+    <app-custom-input
       [label]="'Username'"
       [control]="username"
       [type]="'text'"
       [placeHolder]="'Username'"
-    ></app-custom-text-input>
+    ></app-custom-input>
   </div>
   <div class="input-container">
-    <app-custom-text-input
+    <app-custom-input
       [label]="'Password'"
       [control]="password"
       [type]="'password'"
       [placeHolder]="'Password'"
-    ></app-custom-text-input>
+    ></app-custom-input>
   </div>
   <div class="button-container">
-    <app-main-button [type]="'submit'" [name]="'Login'"></app-main-button>
+    <app-custom-button [type]="'submit'" [name]="'Login'"></app-custom-button>
   </div>
   <div class="error-container" *ngIf="form.hasError('invalidLogin')">
     <p>Incorrect username or password!</p>
@@ -31,4 +31,38 @@
     <span class="link">No account yet?</span>
     <a href="/">Register</a>
   </div>
-</form>
+</form> -->
+<mat-card *ngIf="form">
+  <mat-card-title>Login</mat-card-title>
+  <mat-card-content
+    ><form [formGroup]="form">
+      <div class="input-container">
+        <app-custom-input
+          [label]="'Username'"
+          [control]="username"
+          [type]="'text'"
+          [placeHolder]="'Username'"
+        ></app-custom-input>
+      </div>
+      <div class="input-container">
+        <app-custom-input
+          [label]="'Password'"
+          [control]="password"
+          [type]="'password'"
+          [placeHolder]="'Password'"
+        ></app-custom-input>
+      </div>
+      <div class="input-container">
+        <p class="error" *ngIf="form.hasError('invalidLogin')">
+          Incorrect username or password!
+        </p>
+      </div>
+    </form></mat-card-content
+  >
+  <mat-card-actions>
+    <app-custom-button
+      (buttonClicked)="onSubmit()"
+      [name]="'Login'"
+    ></app-custom-button>
+  </mat-card-actions>
+</mat-card>

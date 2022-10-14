@@ -25,6 +25,7 @@ import { EditNoteComponent } from './features/notes/edit-note/edit-note.componen
 import { HomeNotesComponent } from './features/notes/home-notes/home-notes.component';
 import { NewNoteComponent } from './features/notes/new-note/new-note.component';
 import { SharedModule } from './shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,12 +34,10 @@ import { SharedModule } from './shared/shared.module';
     Task1Component,
     Task2Component,
     NavigationComponent,
-
     StickNoteComponent,
     StickNoteContainerComponent,
     HomeNotesComponent,
     NewNoteComponent,
-
     AddStickyNoteComponent,
     EditNoteComponent,
     StickyNoteControlsComponent,
@@ -51,7 +50,12 @@ import { SharedModule } from './shared/shared.module';
     GridContainerComponent,
     StickyNoteControlsItemComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, SharedModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    SharedModule,
+    BrowserAnimationsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,4 +1,4 @@
-<form
+<!-- <form
   *ngIf="form"
   class="form-container"
   [formGroup]="form"
@@ -7,28 +7,69 @@
 >
   <h2>{{ title }}</h2>
   <div class="input-container">
-    <app-custom-text-input
+    <app-custom-input
       [id]="'stickyNoteFormContentInput'"
       [label]="'Notes Content'"
       [control]="content"
       [placeHolder]="'Content'"
-    ></app-custom-text-input>
+    ></app-custom-input>
   </div>
   <div class="input-container">
-    <app-custom-color-input
+    <app-custom-input
       [id]="'stickyNoteFormColorInput'"
       [control]="color"
       [label]="'Pick a color'"
-    ></app-custom-color-input>
+      [type]="'color'"
+    ></app-custom-input>
   </div>
   <div class="input-container">
-    <app-custom-color-input
+    <app-custom-input
       [id]="'stickyNoteFormBackgroundColorInput'"
       [control]="backgroundColor"
       [label]="'Pick a background Color'"
-    ></app-custom-color-input>
+      [type]="'color'"
+    ></app-custom-input>
   </div>
   <div class="button-container">
-    <app-main-button [type]="'submit'" [name]="title"></app-main-button>
+    <app-custom-button [type]="'submit'" [name]="title"></app-custom-button>
   </div>
 </form>
+ -->
+<mat-card *ngIf="form">
+  <mat-card-title>{{ title }}</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="form" id="stickzNoteForm">
+      <div class="input-container">
+        <app-custom-input
+          [id]="'stickyNoteFormContentInput'"
+          [label]="'Notes Content'"
+          [control]="content"
+          [placeHolder]="'Content'"
+        ></app-custom-input>
+      </div>
+      <div class="input-container">
+        <app-custom-input
+          [id]="'stickyNoteFormColorInput'"
+          [control]="color"
+          [label]="'Pick Font Color'"
+          [type]="'color'"
+        ></app-custom-input>
+      </div>
+      <div class="input-container">
+        <app-custom-input
+          [id]="'stickyNoteFormBackgroundColorInput'"
+          [control]="backgroundColor"
+          [label]="'Pick Background Color'"
+          [type]="'color'"
+        ></app-custom-input>
+      </div>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <app-custom-button
+      (buttonClicked)="onHandleForm()"
+      [type]="'submit'"
+      [name]="title"
+    ></app-custom-button>
+  </mat-card-actions>
+</mat-card>

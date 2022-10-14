@@ -1,5 +1,5 @@
-@import "../../../colors";
-
+/* @import "../../../colors";
+ */
 // .form-container {
 //   display: flex;
 //   justify-content: center;
@@ -11,7 +11,7 @@
 //   text-align: center;
 //   flex-direction: column;
 // }
-
+/* 
 .form-container {
   display: flex;
   flex-direction: column;
@@ -22,4 +22,30 @@
   padding: 3%;
     max-width:max-content;
     min-height: max-content;
+}
+ */
+ 
+ mat-card{
+  width: 100vw;
+  max-width: 500px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+mat-card * {
+  width: 100%;
+}
+
+mat-card-title{
+padding: 15px 0;  
+}
+mat-card-content{
+padding: 15px 0;  
+
+}
+.input-container{
+  margin: 15px 0;
 }
