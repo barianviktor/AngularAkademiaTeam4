@@ -1,0 +1,32 @@
+<!-- <div *ngIf="control" class="input-container">
+  <label>
+    {{ label }}
+  </label>
+  <div>
+    <input
+      [id]="id"
+      [type]="type"
+      [formControl]="control"
+      [placeholder]="placeHolder"
+    />
+  </div>
+  <div *ngIf="control.invalid && control.touched" class="error-container">
+    <small *ngIf="control.hasError('required')">The field is required</small>
+    <small *ngIf="control.hasError('username')">Username is required</small>
+  </div>
+</div>
+ -->
+<div class="input-container">
+  <mat-form-field appearance="fill" *ngIf="control">
+    <mat-label>{{ label }}</mat-label>
+    <input
+      matInput
+      [placeholder]="placeHolder"
+      [type]="type"
+      [formControl]="control"
+    />
+    <mat-error *ngIf="control.invalid && control.touched">
+      <p *ngIf="control.hasError('required')">The field is required</p>
+    </mat-error>
+  </mat-form-field>
+</div>

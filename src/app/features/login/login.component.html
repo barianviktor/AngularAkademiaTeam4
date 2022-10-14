@@ -2,23 +2,23 @@
   <form class="form-container" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <p class="header">Login</p>
     <div class="input-container">
-      <app-custom-text-input
+      <app-custom-input
         [label]="'Username'"
         [control]="username"
         [type]="'text'"
         [placeHolder]="'Username'"
-      ></app-custom-text-input>
+      ></app-custom-input>
     </div>
     <div class="input-container">
-      <app-custom-text-input
+      <app-custom-input
         [label]="'Password'"
         [control]="password"
         [type]="'password'"
         [placeHolder]="'Password'"
-      ></app-custom-text-input>
+      ></app-custom-input>
     </div>
     <div class="button-container">
-      <app-main-button></app-main-button>
+      <app-custom-button></app-custom-button>
       <div class="error-container" *ngIf="loginForm.hasError('invalidLogin')">
         <small>Incorrect username or password!</small>
       </div>

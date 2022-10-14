@@ -1,27 +1,43 @@
-<ng-container *ngIf="note">
-  <div
-    [ngStyle]="{ backgroundColor: note.backgroundColor, color: note.color }"
-    class="note-container"
-  >
-    <div class="icon-container" [ngStyle]="{ borderColor: note.color }">
-      <fa-icon
-        [ngStyle]="{ color: note.color }"
-        [icon]="faEdit"
-        size="lg"
-        class="editIcon"
-        (click)="onEditClicked()"
-      ></fa-icon>
-      <fa-icon
-        [ngStyle]="{ color: note.color }"
-        [icon]="faTrash"
-        size="lg"
-        class="deleteIcon"
-        (click)="onDeleteClicked()"
-      ></fa-icon>
-    </div>
-    <div class="content-container">
-      <p class="content">{{ note.content }}</p>
-      <p class="created_at">{{ note.create_at }}</p>
-    </div>
+<!-- <div
+  *ngIf="note"
+  [ngStyle]="{ backgroundColor: note.backgroundColor, color: note.color }"
+  class="note-container"
+>
+  <div class="icon-container" [ngStyle]="{ borderColor: note.color }">
+    <fa-icon
+      [ngStyle]="{ color: note.color }"
+      [icon]="faEdit"
+      size="lg"
+      class="editIcon"
+      (click)="onEditClicked()"
+    ></fa-icon>
+    <fa-icon
+      [ngStyle]="{ color: note.color }"
+      [icon]="faTrash"
+      size="lg"
+      class="deleteIcon"
+      (click)="onDeleteClicked()"
+    ></fa-icon>
   </div>
-</ng-container>
+  <div class="content-container">
+    <p class="content">{{ note.content }}</p>
+    <p class="created_at">{{ note.create_at }}</p>
+  </div>
+</div> -->
+<mat-card
+  class="note-container"
+  *ngIf="note"
+  [ngStyle]="{ backgroundColor: note.backgroundColor, color: note.color }"
+>
+  <mat-card-header class="icon-container">
+    <button class="editIcon" (click)="onEditClicked()" mat-icon-button>
+      <mat-icon>edit</mat-icon></button
+    ><button (click)="onDeleteClicked()" class="deleteIcon" mat-icon-button>
+      <mat-icon>delete</mat-icon>
+    </button>
+  </mat-card-header>
+  <mat-card-content class="content-container">
+    <p class="content">{{ note.content }}</p>
+    <p class="created_at">{{ note.create_at }}</p>
+  </mat-card-content>
+</mat-card>

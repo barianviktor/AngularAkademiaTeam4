@@ -22,6 +22,8 @@ export class LoginFormComponent implements OnInit {
   }
 
   onSubmit(): void {
+    console.log('asd');
+
     this.formSubmited.emit();
   }
 }
