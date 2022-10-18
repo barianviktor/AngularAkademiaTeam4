@@ -46,7 +46,7 @@ export class EditNoteComponent implements OnInit {
     return this.editNoteForm.get('backgroundColor') as FormControl;
   }
 
-  onFormSubmited() {
+  onFormSubmited(): void {
     let changedNote: INote = {
       backgroundColor: this.backgroundColor.value,
       color: this.color.value,

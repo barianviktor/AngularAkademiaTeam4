@@ -5,12 +5,12 @@ import { Injectable } from '@angular/core';
 })
 export class AuthenticationService {
   private isLogedIn: boolean = false;
-  private username: string = '';
-  private password: string = '';
+  private username: string = 'username';
+  private password: string = 'password';
 
   constructor() {}
 
-  getIsLogedIn() {
+  getIsLogedIn(): boolean {
     if (localStorage.getItem('userIsLogedIn')) {
       this.isLogedIn = true;
     } else {
@@ -31,10 +31,10 @@ export class AuthenticationService {
     }
   }
 
-  setUserIsLogedInLocalStorage(setTo: boolean) {
+  setUserIsLogedInLocalStorage(setTo: boolean): void {
     localStorage.setItem('userIsLogedIn', JSON.stringify(setTo));
   }
-  logout() {
+  logout(): void {
     localStorage.clear();
     this.isLogedIn = false;
   }

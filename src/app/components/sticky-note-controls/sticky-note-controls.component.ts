@@ -31,12 +31,10 @@ export class StickyNoteControlsComponent implements OnInit {
   @Input() currentHorizontal = 'center';
   @Input() currentVertical = 'center';
   constructor(private noteService: NoteService) {}
-  onSetHorizontal(value: string) {
-    console.log(value);
-
+  onSetHorizontal(value: string): void {
     this.setHorizontal.emit(value);
   }
-  onSetVertical(value: string) {
+  onSetVertical(value: string): void {
     this.setVertical.emit(value);
   }
   ngOnInit(): void {}

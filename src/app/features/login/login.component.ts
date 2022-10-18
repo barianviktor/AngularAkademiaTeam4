@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   get password(): FormControl {
     return this.loginForm.get('password') as FormControl;
   }
-  handleSubmit() {
+  handleSubmit(): void {
     if (
       this.authService.checkLoginData(this.username.value, this.password.value)
     ) {

@@ -18,20 +18,16 @@ export class StickNoteContainerComponent implements OnInit {
   }
 
   ngOnInit(): void {}
-  onEditNote(id: number) {
+  onEditNote(id: number): void {
     this.router.navigate(['/notes', id, 'edit']);
   }
-  onDeleteNote(id: number) {
+  onDeleteNote(id: number): void {
     this.noteService.deleteNote(id);
   }
-  onSetHorzontal(horizontal: string) {
-    console.log('hor', horizontal, this.horizontalAlignment);
-
+  onSetHorzontal(horizontal: string): void {
     this.horizontalAlignment = horizontal;
   }
-  onSetVerical(vertical: string) {
-    console.log('ver', vertical, this.verticalAlignment);
-
+  onSetVerical(vertical: string): void {
     this.verticalAlignment = vertical;
   }
 }

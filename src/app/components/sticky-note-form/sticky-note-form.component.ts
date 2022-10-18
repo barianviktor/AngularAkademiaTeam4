@@ -22,7 +22,7 @@ export class StickyNoteFormComponent implements OnInit {
     return this.form?.get('backgroundColor') as FormControl;
   }
   ngOnInit(): void {}
-  onHandleForm() {
+  onHandleForm(): void {
     this.formSubmited.emit();
   }
 }

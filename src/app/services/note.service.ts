@@ -82,7 +82,7 @@ export class NoteService {
     );
     this.noteList$.next(notes);
   }
-  deleteAllNotes() {
+  deleteAllNotes(): void {
     this.noteList$.next([]);
   }
 }

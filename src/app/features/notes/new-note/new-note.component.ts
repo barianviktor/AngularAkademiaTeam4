@@ -26,9 +26,8 @@ export class NewNoteComponent implements OnInit, OnDestroy {
   get backgroundColor(): FormControl {
     return this.newNoteForm.get('backgroundColor') as FormControl;
   }
-  handleSubmit() {
+  handleSubmit(): void {
     console.log('handled');
-    console.log(this.newNoteForm);
 
     if (this.newNoteForm.valid) {
       let note: INote = {
